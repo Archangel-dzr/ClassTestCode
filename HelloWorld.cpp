@@ -15,10 +15,17 @@
  * @
  * @Author: Archangel-dzr 781446156@qq.com
  * @Date: 2024-11-04 10:11:32
- * @LastEditTime: 2024-11-04 10:11:47
- * @LastEditors: Archangel-dzr 781446156@qq.com
+ * @LastEditTime: 2024-11-04 16:25:34
+ * @LastEditors: Archangel 781446156@qq.com
  * @Description: 
- * @FilePath: \TestCode\HelloWorld.cpp
+ * @FilePath: \ClassTestCode\HelloWorld.cpp
  * @Copyright (c) 2024 by Archangel-dzr email: 781446156@qq.com, All Rights Reserved. 
  */
+#include <iostream>
+#include <string>
 
+int main()
+{
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
