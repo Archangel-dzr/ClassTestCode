@@ -15,7 +15,7 @@
  * @
  * @Author: Archangel 781446156@qq.com
  * @Date: 2024-11-05 16:01:43
- * @LastEditTime: 2024-11-05 16:15:59
+ * @LastEditTime: 2024-11-05 16:44:38
  * @LastEditors: Archangel 781446156@qq.com
  * @Description: 
  * @FilePath: \ClassTestCode\WarRTS.cpp
@@ -37,22 +37,22 @@ private:
     int stone;
     int iron;
 
-public:
-    Player(int id, string name, string psw, bool vip, int coins, int wood, int stone, int iron) {
-        if (coins < 0 || wood < 0 || stone < 0 || iron < 0) {
+    // 检查资源是否有效
+    void validateResources() const {
+        if (gameCoins < 0 || woods < 0 || stone < 0 || iron < 0) {
             throw invalid_argument("资源数量不能为负数");
         }
-        gameID = id;
-        nickname = name;
-        password = psw;
-        VIP = vip;
-        gameCoins = coins;
-        woods = wood;
-        this->stone = stone; 
-        this->iron = iron;
+    }
+
+public:
+    Player(int id, string name, string psw, bool vip, int coins, int wood, int stone, int iron) 
+        : gameID{id}, nickname{std::move(name)}, password{std::move(psw)}, VIP{vip}, 
+          gameCoins{coins}, woods{wood}, stone{stone}, iron{iron} {
+        validateResources();
     }
 
     void showInfo() const { 
+        cout << "___玩家信息：___" << endl;
         cout << "游戏ID：" << gameID << endl;
         cout << "昵称：" << nickname << endl;
         cout << "VIP：" << (VIP ? "是" : "否") << endl; 
@@ -65,9 +65,16 @@ public:
 
 int main() {
     try {
-        Player player(1001, "Archangel", "123456", true, 10000, 1000, 500, 300);
-        cout << "玩家信息：" << endl;
-        player.showInfo();
+        Player players[] = {
+            {1001, "Archangel", "123456", true, 10000, 1000, 500, 300},
+            {1002, "刘备", "123456", false, 5000, 2000, 1000, 800},
+            {1003, "曹操", "123456", true, 100000, 5000, 2000, 1000},
+            {1004, "孙权", "123456", false, 50000, 20000, 10000, 5000}
+        };
+
+        for (const auto& player : players) {
+            player.showInfo();
+        }
     } catch (const invalid_argument& e) {
         cerr << "错误： " << e.what() << endl; 
     }
