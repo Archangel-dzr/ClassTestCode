@@ -15,18 +15,13 @@
  * @
  * @Author: Archangel 781446156@qq.com
  * @Date: 2024-11-08 18:06:06
- * @LastEditTime: 2024-11-08 18:12:39
+ * @LastEditTime: 2024-11-08 18:14:49
  * @LastEditors: Archangel 781446156@qq.com
  * @Description: 设计一个人的类（基类），再分别设计一个学生类（子类）和教师类（子类）单继承人类
  * @FilePath: \ClassTestCode\.vscode\Person.cpp
  * @Copyright (c) 2024 by Archangel email: 781446156@qq.com, All Rights Reserved. 
  */
-//人类：属性：姓名，年龄，性别
-//方法：吃饭，睡觉
-//学生类：属性：姓名，年龄，性别，分数，学号
-//方法：吃饭，睡觉，打游戏，学习
-//教师类：属性：姓名，年龄，性别，教龄，工作类别
-//方法：吃饭，睡觉，教学，备课
+
 #include <iostream>
 #include <stdexcept> 
 using namespace std;
