@@ -17,12 +17,11 @@
  * @Date: 2024-11-12 11:19:30
  * @LastEditTime: 2024-11-12 11:26:23
  * @LastEditors: Archangel 781446156@qq.com
- * @Description: 
+ * @Description: static的使用示例
  * @FilePath: \ClassTestCode\SalesPerson.cpp
  * @Copyright (c) 2024 by Archangel email: 781446156@qq.com, All Rights Reserved. 
  */
 
-//使用static修饰类，设计一个销售员SalesPerson类（销售华为MateP60Pro），数量10万台，现在招聘销售员3人，经过一星期，销售员1号销售18909台，销售员2号销售39876台，3号销售了40021台，输出剩余库存
 
 #include <iostream>
 using namespace std;
