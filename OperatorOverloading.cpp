@@ -15,38 +15,12 @@
  * @
  * @Author: Archangel 781446156@qq.com
  * @Date: 2024-11-14 10:02:42
- * @LastEditTime: 2024-11-14 10:08:26
+ * @LastEditTime: 2024-11-14 10:09:36
  * @LastEditors: Archangel 781446156@qq.com
  * @Description: 
  * @FilePath: \ClassTestCode\OperatorOverloading.cpp
  * @Copyright (c) 2024 by Archangel email: 781446156@qq.com, All Rights Reserved. 
  */
-
-/*** 
- * @ ┌─────────────────────────────────────────────────────────────┐
- * @ │┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐│
- * @ ││Esc│!1 │@2 │#3 │$4 │%5 │^6 │&7 │*8 │(9 │)0 │_- │+= │|\ │`~ ││
- * @ │├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┤│
- * @ ││ Tab │ Q │ W │ E │ R │ T │ Y │ U │ I │ O │ P │{[ │}] │ BS  ││
- * @ │├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤│
- * @ ││ Ctrl │ A │ S │ D │ F │ G │ H │ J │ K │ L │: ;│" '│ Enter  ││
- * @ │├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┬───┤│
- * @ ││ Shift  │ Z │ X │ C │ V │ B │ N │ M │< ,│> .│? /│Shift │Fn ││
- * @ │└─────┬──┴┬──┴──┬┴───┴───┴───┴───┴───┴──┬┴───┴┬──┴┬─────┴───┘│
- * @ │      │Fn │ Alt │         Space         │ Alt │Win│   HHKB   │
- * @ │      └───┴─────┴───────────────────────┴─────┴───┘          │
- * @ └─────────────────────────────────────────────────────────────┘
- * @
- * @Author: Archangel 781446156@qq.com
- * @Date: 2024-11-14 10:02:42
- * @LastEditTime: 2024-11-14 10:08:07
- * @LastEditors: Archangel 781446156@qq.com
- * @Description: 
- * @FilePath: \ClassTestCode\OperatorOverloading.cpp
- * @Copyright (c) 2024 by Archangel email: 781446156@qq.com, All Rights Reserved. 
- */
-
-
 
 
 #include <iostream>
