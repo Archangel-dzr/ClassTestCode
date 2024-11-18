@@ -15,14 +15,14 @@
  * @
  * @Author: Archangel 781446156@qq.com
  * @Date: 2024-11-18 19:09:50
- * @LastEditTime: 2024-11-18 20:03:43
+ * @LastEditTime: 2024-11-18 20:23:48
  * @LastEditors: Archangel 781446156@qq.com
  * @Description: 
  * @FilePath: \ClassTestCode\Shurufa.cpp
  * @Copyright (c) 2024 by Archangel email: 781446156@qq.com, All Rights Reserved. 
  */
 
-//从拼音汉字对照表（文件）中加载key和value，并将key和value保存到容器中，然后根据用户输入的拼音字母，在容器中中查找对应的汉字。
+
 #include <iostream>
 #include <fstream>
 #include <map>
