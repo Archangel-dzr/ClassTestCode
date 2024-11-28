@@ -1,17 +1,17 @@
 /*** 
- * @ ©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
- * @ ©¦©°©¤©¤©¤©Ð©¤©¤©¤©Ð©¤©¤©¤©Ð©¤©¤©¤©Ð©¤©¤©¤©Ð©¤©¤©¤©Ð©¤©¤©¤©Ð©¤©¤©¤©Ð©¤©¤©¤©Ð©¤©¤©¤©Ð©¤©¤©¤©Ð©¤©¤©¤©Ð©¤©¤©¤©Ð©¤©¤©¤©Ð©¤©¤©¤©´©¦
- * @ ©¦©¦Esc©¦!1 ©¦@2 ©¦#3 ©¦$4 ©¦%5 ©¦^6 ©¦&7 ©¦*8 ©¦(9 ©¦)0 ©¦_- ©¦+= ©¦|\ ©¦`~ ©¦©¦
- * @ ©¦©À©¤©¤©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©¤©¤©È©¦
- * @ ©¦©¦ Tab ©¦ Q ©¦ W ©¦ E ©¦ R ©¦ T ©¦ Y ©¦ U ©¦ I ©¦ O ©¦ P ©¦{[ ©¦}] ©¦ BS  ©¦©¦
- * @ ©¦©À©¤©¤©¤©¤©¤©Ø©Ð©¤©¤©Ø©Ð©¤©¤©Ø©Ð©¤©¤©Ø©Ð©¤©¤©Ø©Ð©¤©¤©Ø©Ð©¤©¤©Ø©Ð©¤©¤©Ø©Ð©¤©¤©Ø©Ð©¤©¤©Ø©Ð©¤©¤©Ø©Ð©¤©¤©Ø©Ð©¤©¤©Ø©¤©¤©¤©¤©¤©È©¦
- * @ ©¦©¦ Ctrl ©¦ A ©¦ S ©¦ D ©¦ F ©¦ G ©¦ H ©¦ J ©¦ K ©¦ L ©¦: ;©¦" '©¦ Enter  ©¦©¦
- * @ ©¦©À©¤©¤©¤©¤©¤©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©Ð©¤©Ø©¤©¤©¤©¤©Ð©¤©¤©¤©È©¦
- * @ ©¦©¦ Shift  ©¦ Z ©¦ X ©¦ C ©¦ V ©¦ B ©¦ N ©¦ M ©¦< ,©¦> .©¦? /©¦Shift ©¦Fn ©¦©¦
- * @ ©¦©¸©¤©¤©¤©¤©¤©Ð©¤©¤©Ø©Ð©¤©¤©Ø©¤©¤©Ð©Ø©¤©¤©¤©Ø©¤©¤©¤©Ø©¤©¤©¤©Ø©¤©¤©¤©Ø©¤©¤©¤©Ø©¤©¤©Ð©Ø©¤©¤©¤©Ø©Ð©¤©¤©Ø©Ð©¤©¤©¤©¤©¤©Ø©¤©¤©¤©¼©¦
- * @ ©¦      ©¦Fn ©¦ Alt ©¦         Space         ©¦ Alt ©¦Win©¦   HHKB   ©¦
- * @ ©¦      ©¸©¤©¤©¤©Ø©¤©¤©¤©¤©¤©Ø©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©Ø©¤©¤©¤©¤©¤©Ø©¤©¤©¤©¼          ©¦
- * @ ©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+ * @ â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+ * @ â”‚â”Œâ”€â”€â”€â”¬â”€â”€â”€â”¬â”€â”€â”€â”¬â”€â”€â”€â”¬â”€â”€â”€â”¬â”€â”€â”€â”¬â”€â”€â”€â”¬â”€â”€â”€â”¬â”€â”€â”€â”¬â”€â”€â”€â”¬â”€â”€â”€â”¬â”€â”€â”€â”¬â”€â”€â”€â”¬â”€â”€â”€â”¬â”€â”€â”€â”â”‚
+ * @ â”‚â”‚Escâ”‚!1 â”‚@2 â”‚#3 â”‚$4 â”‚%5 â”‚^6 â”‚&7 â”‚*8 â”‚(9 â”‚)0 â”‚_- â”‚+= â”‚|\ â”‚`~ â”‚â”‚
+ * @ â”‚â”œâ”€â”€â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”€â”€â”¤â”‚
+ * @ â”‚â”‚ Tab â”‚ Q â”‚ W â”‚ E â”‚ R â”‚ T â”‚ Y â”‚ U â”‚ I â”‚ O â”‚ P â”‚{[ â”‚}] â”‚ BS  â”‚â”‚
+ * @ â”‚â”œâ”€â”€â”€â”€â”€â”´â”¬â”€â”€â”´â”¬â”€â”€â”´â”¬â”€â”€â”´â”¬â”€â”€â”´â”¬â”€â”€â”´â”¬â”€â”€â”´â”¬â”€â”€â”´â”¬â”€â”€â”´â”¬â”€â”€â”´â”¬â”€â”€â”´â”¬â”€â”€â”´â”¬â”€â”€â”´â”€â”€â”€â”€â”€â”¤â”‚
+ * @ â”‚â”‚ Ctrl â”‚ A â”‚ S â”‚ D â”‚ F â”‚ G â”‚ H â”‚ J â”‚ K â”‚ L â”‚: ;â”‚" 'â”‚ Enter  â”‚â”‚
+ * @ â”‚â”œâ”€â”€â”€â”€â”€â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”¬â”€â”´â”€â”€â”€â”€â”¬â”€â”€â”€â”¤â”‚
+ * @ â”‚â”‚ Shift  â”‚ Z â”‚ X â”‚ C â”‚ V â”‚ B â”‚ N â”‚ M â”‚< ,â”‚> .â”‚? /â”‚Shift â”‚Fn â”‚â”‚
+ * @ â”‚â””â”€â”€â”€â”€â”€â”¬â”€â”€â”´â”¬â”€â”€â”´â”€â”€â”¬â”´â”€â”€â”€â”´â”€â”€â”€â”´â”€â”€â”€â”´â”€â”€â”€â”´â”€â”€â”€â”´â”€â”€â”¬â”´â”€â”€â”€â”´â”¬â”€â”€â”´â”¬â”€â”€â”€â”€â”€â”´â”€â”€â”€â”˜â”‚
+ * @ â”‚      â”‚Fn â”‚ Alt â”‚         Space         â”‚ Alt â”‚Winâ”‚   HHKB   â”‚
+ * @ â”‚      â””â”€â”€â”€â”´â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”´â”€â”€â”€â”˜          â”‚
+ * @ â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
  * @
  * @Author: Archangel 781446156@qq.com
  * @Date: 2024-11-18 19:09:50
@@ -34,17 +34,17 @@
 using namespace std;
 
 int main() {
-    // Ê¹ÓÃmap´æ´¢Æ´ÒôÓëºº×ÖµÄÓ³Éä
+    // ä½¿ç”¨mapå­˜å‚¨æ‹¼éŸ³ä¸Žæ±‰å­—çš„æ˜ å°„
     map<string, string> pymap;
     ifstream in("pinyinutf8.txt");
 
-    // ¼ì²éÎÄ¼þÊÇ·ñ³É¹¦´ò¿ª
+    // æ£€æŸ¥æ–‡ä»¶æ˜¯å¦æˆåŠŸæ‰“å¼€
     if (!in.is_open()) {
-        cerr << "ÎÞ·¨´ò¿ªÎÄ¼þ: pinyinutf8.txt" << endl;
-        return EXIT_FAILURE; // Ê¹ÓÃ±ê×¼ÍË³öÂë
+        cerr << "æ— æ³•æ‰“å¼€æ–‡ä»¶: pinyinutf8.txt" << endl;
+        return EXIT_FAILURE; // ä½¿ç”¨æ ‡å‡†é€€å‡ºç 
     }
 
-    // ¶ÁÈ¡ÎÄ¼þ²¢Ìî³ämap
+    // è¯»å–æ–‡ä»¶å¹¶å¡«å……map
     string data;
     while (getline(in, data)) {
         size_t pos = data.find('=');
@@ -55,38 +55,38 @@ int main() {
         }
     }
 
-    in.close(); // ¹Ø±ÕÎÄ¼þ
+    in.close(); // å…³é—­æ–‡ä»¶
 
-    // ½»»¥Ê½ÊäÈëÆ´Òô
+    // äº¤äº’å¼è¾“å…¥æ‹¼éŸ³
     while (true) {
-        cout << "ÇëÊäÈëÆ´Òô£º";
+        cout << "è¯·è¾“å…¥æ‹¼éŸ³ï¼š";
         string inputkey;
         cin >> inputkey;
 
-        // Ê¹ÓÃat()·½·¨½øÐÐÒì³£´¦Àí
+        // ä½¿ç”¨at()æ–¹æ³•è¿›è¡Œå¼‚å¸¸å¤„ç†
         try {
             string inputValue = pymap.at(inputkey);
             for (size_t i = 0; i < inputValue.size() / 2; i++) {
                 if (i % 5 == 0 && i != 0) {
-                    cout << endl; // Ã¿5¸öºº×Ö»»ÐÐ
+                    cout << endl; // æ¯5ä¸ªæ±‰å­—æ¢è¡Œ
                 }
                 cout << i + 1 << ". " << inputValue.substr(i * 2, 2) << "\t";
             }
             cout << endl;
 
-            // ÊäÈëË÷Òý²¢Êä³ö¶ÔÓ¦ºº×Ö
+            // è¾“å…¥ç´¢å¼•å¹¶è¾“å‡ºå¯¹åº”æ±‰å­—
             int num = 0;
-            cout << "ÇëÊäÈëÒªÑ¡ÔñµÄ±àºÅ£º";
+            cout << "è¯·è¾“å…¥è¦é€‰æ‹©çš„ç¼–å·ï¼š";
             cin >> num;
             if (num > 0 && num <= inputValue.size() / 2) {
                 cout << inputValue.substr((num - 1) * 2, 2) << endl;
             } else {
-                cout << "±àºÅÎÞÐ§£¬ÇëÖØÐÂÊäÈë¡£" << endl;
+                cout << "ç¼–å·æ— æ•ˆï¼Œè¯·é‡æ–°è¾“å…¥ã€‚" << endl;
             }
         } catch (const out_of_range&) {
-            cout << "Æ´Òô²»´æÔÚ£¬ÇëÖØÐÂÊäÈë¡£" << endl;
+            cout << "æ‹¼éŸ³ä¸å­˜åœ¨ï¼Œè¯·é‡æ–°è¾“å…¥ã€‚" << endl;
         } catch (const invalid_argument&) {
-            cout << "ÊäÈëÎÞÐ§£¬ÇëÊäÈëÕýÈ·µÄÆ´Òô¡£" << endl;
+            cout << "è¾“å…¥æ— æ•ˆï¼Œè¯·è¾“å…¥æ­£ç¡®çš„æ‹¼éŸ³ã€‚" << endl;
         }
     }
 
