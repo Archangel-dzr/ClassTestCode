@@ -1,7 +1,7 @@
 /*** 
  * @Author: Archangel 781446156@qq.com
  * @Date: 2024-11-28 09:17:47
- * @LastEditTime: 2024-11-28 09:25:25
+ * @LastEditTime: 2024-11-28 10:05:04
  * @LastEditors: Archangel 781446156@qq.com
  * @Description:  
  * @FilePath: \ClassTestCode\treeNode.cpp
@@ -12,43 +12,43 @@
 
 using namespace std;
 
-// ¶ş²æÊ÷½Úµã¶¨Òå
+// äºŒå‰æ ‘èŠ‚ç‚¹å®šä¹‰
 struct TreeNode {
-    int val;              // ½ÚµãÖµ
-    TreeNode* left;      // ×ó×Ó½Úµã
-    TreeNode* right;     // ÓÒ×Ó½Úµã
+    int val;              // èŠ‚ç‚¹å€¼
+    TreeNode* left;      // å·¦å­èŠ‚ç‚¹
+    TreeNode* right;     // å³å­èŠ‚ç‚¹
 
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {} // ¹¹Ôìº¯Êı
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {} // æ„é€ å‡½æ•°
 };
 
-// ²åÈëº¯Êı£º½«Öµ²åÈë¶ş²æÊ÷
+// æ’å…¥å‡½æ•°ï¼šå°†å€¼æ’å…¥äºŒå‰æ ‘
 TreeNode* insert(TreeNode* root, int val) {
     if (root == nullptr) {
-        return new TreeNode(val); // Èç¹ûÊ÷Îª¿Õ£¬Ôò·µ»ØĞÂ½Úµã
+        return new TreeNode(val); // å¦‚æœæ ‘ä¸ºç©ºï¼Œåˆ™è¿”å›æ–°èŠ‚ç‚¹
     }
     if (val < root->val) {
-        root->left = insert(root->left, val); // µİ¹é²åÈë×ó×ÓÊ÷
+        root->left = insert(root->left, val); // é€’å½’æ’å…¥å·¦å­æ ‘
     } else {
-        root->right = insert(root->right, val); // µİ¹é²åÈëÓÒ×ÓÊ÷
+        root->right = insert(root->right, val); // é€’å½’æ’å…¥å³å­æ ‘
     }
-    return root; // ·µ»Ø¸ù½Úµã
+    return root; // è¿”å›æ ¹èŠ‚ç‚¹
 }
 
-// ²ãĞò±éÀúº¯Êı
+// å±‚åºéå†å‡½æ•°
 void levelOrderTraversal(TreeNode* root) {
     if (root == nullptr) {
-        return; // Èç¹ûÊ÷Îª¿Õ£¬Ö±½Ó·µ»Ø
+        return; // å¦‚æœæ ‘ä¸ºç©ºï¼Œç›´æ¥è¿”å›
     }
     
-    queue<TreeNode*> q; // Ê¹ÓÃ¶ÓÁĞÀ´Ö§³Ö²ãĞò±éÀú
-    q.push(root); // ½«¸ù½ÚµãÑ¹Èë¶ÓÁĞ
+    queue<TreeNode*> q; // ä½¿ç”¨é˜Ÿåˆ—æ¥æ”¯æŒå±‚åºéå†
+    q.push(root); // å°†æ ¹èŠ‚ç‚¹å‹å…¥é˜Ÿåˆ—
 
     while (!q.empty()) {
-        TreeNode* node = q.front(); // »ñÈ¡¶ÓÁĞÍ·²¿½Úµã
-        q.pop(); // µ¯³ö¶ÓÁĞÍ·²¿½Úµã
-        cout << node->val << " "; // Êä³ö½ÚµãÖµ
+        TreeNode* node = q.front(); // è·å–é˜Ÿåˆ—å¤´éƒ¨èŠ‚ç‚¹
+        q.pop(); // å¼¹å‡ºé˜Ÿåˆ—å¤´éƒ¨èŠ‚ç‚¹
+        cout << node->val << " "; // è¾“å‡ºèŠ‚ç‚¹å€¼
         
-        // ½«×ó×Ó½ÚµãºÍÓÒ×Ó½ÚµãÑ¹Èë¶ÓÁĞ
+        // å°†å·¦å­èŠ‚ç‚¹å’Œå³å­èŠ‚ç‚¹å‹å…¥é˜Ÿåˆ—
         if (node->left != nullptr) {
             q.push(node->left);
         }
@@ -59,7 +59,7 @@ void levelOrderTraversal(TreeNode* root) {
 }
 
 int main() {
-    TreeNode* root = nullptr; // ³õÊ¼»¯Ê÷¸ù
+    TreeNode* root = nullptr; // åˆå§‹åŒ–æ ‘æ ¹
     root = insert(root, 5); 
     insert(root, 3);
     insert(root, 7);
@@ -68,8 +68,8 @@ int main() {
     insert(root, 6);
     insert(root, 8);
 
-    cout << "²ãĞò±éÀú½á¹û£º";
-    levelOrderTraversal(root); // µ÷ÓÃ²ãĞò±éÀúº¯Êı
+    cout << "å±‚åºéå†ç»“æœï¼š";
+    levelOrderTraversal(root); // è°ƒç”¨å±‚åºéå†å‡½æ•°
     cout << endl;
 
     return 0;
